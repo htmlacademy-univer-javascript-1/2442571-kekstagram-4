@@ -28,6 +28,18 @@ function returnNamber(line){
   return num;
 }
 
-console.log(isCorrectLength('проверяемая строка', 20));
-console.log(isPalindrome('ДовОд'));
-console.log(returnNamber('2023 год'));
+function inTime(startTime, endTime, meetTime, time){
+  const start = startTime.split(':');
+  const end = endTime.split(':');
+  const meet = meetTime.split(':');
+  const startTimeInMinutes = Number(start[0]) * 60 + Number(start[1]);
+  const endTimeInMinutes = Number(end[0]) * 60 + Number(end[1]);
+  const meetTimeInMinutes = Number(meet[0]) * 60 + Number(meet[1]);
+  const endMeetTimeInMinutes = meetTimeInMinutes + time;
+
+  if(endMeetTimeInMinutes <= endTimeInMinutes && endMeetTimeInMinutes >= startTimeInMinutes){
+    return true;
+  }
+  return false;
+}
+
