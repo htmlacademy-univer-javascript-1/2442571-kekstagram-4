@@ -28,6 +28,6 @@ function returnNamber(line){
   return num;
 }
 
-isCorrectLength('проверяемая строка', 20);
-isPalindrome('ДовОд');
-returnNamber('2023 год');
+console.log(isCorrectLength('проверяемая строка', 20));
+console.log(isPalindrome('ДовОд'));
+console.log(returnNamber('2023 год'));
